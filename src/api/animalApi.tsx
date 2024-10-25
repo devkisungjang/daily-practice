@@ -13,11 +13,11 @@ export const getCat = async () => {
 
 // post 요청
 export const postDog = async (body: any) => {
-  const response = await api.get("/dogs", body);
+  const response = await api.post("/dogs", body);
   return response.data;
 };
 
 export const postCat = async (body: any) => {
-  const response = await api.get("/cats", body);
+  const response = await api.post("/cats", body);
   return response.data;
 };
