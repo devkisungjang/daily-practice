@@ -1,8 +1,11 @@
 import "../styles/Main.scss";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useQuery } from "react-query";
 import useStore from "../zustand/animal";
 import { getDog, postDog } from "../api/animalApi";
+
+// 버튼 컴포넌트
+import Button from "../components/button/Button";
 
 const Main = () => {
   // zustand 스토어
@@ -62,7 +65,6 @@ const Main = () => {
         <button onClick={getDataHandler}>get 요청</button>
         <div>
           <h2>데이터 리스트</h2>
-
           {data &&
             data.map((v: any, i: any) => (
               <div>
@@ -103,6 +105,9 @@ const Main = () => {
         <h3>count : {count}</h3>
         <button onClick={increment}> + </button>
         <button onClick={decrement}> - </button>
+      </div>
+      <div>
+        <h2>버튼 컴포넌트 예제</h2>
       </div>
     </div>
   );

@@ -1,0 +1,51 @@
+// 기본 스타일
+.badge {
+  background-color: red;
+  padding: 5px;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.4s;
+  &:hover {
+    filter: brightness(0.6);
+  }
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.orange {
+  background-color: orange;
+  color: black;
+}
+
+.pink {
+  background-color: pink;
+  border: 2px solid rgb(253, 153, 170);
+  color: black;
+}
+
+.small {
+  border-radius: 0.15rem;
+}
+
+.medium {
+  border-radius: 0.4rem;
+}
+
+.large {
+  border-radius: 0.6rem;
+}
+
+.xlarge {
+  border-radius: 0.9rem;
+}
