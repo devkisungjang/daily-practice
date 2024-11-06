@@ -67,8 +67,8 @@ const Responsive = () => {
   return (
     <>
       <header>
-        <div className="inner-left"></div>
-        <div className="inner-right"></div>
+        <div className="inner-left">반응형 테스트</div>
+        <div className="inner-right">반응형 테스트</div>
       </header>
       <div className="navbar">
         <div className="navbar"></div>
@@ -92,12 +92,14 @@ const Responsive = () => {
           }}
           modules={[Pagination]}
           breakpoints={{
+            1200: {
+              slidesPerView: 4,
+            },
             768: {
-              slidesPerView: 2,
+              slidesPerView: 3,
             },
             320: {
               slidesPerView: 2,
-              spaceBetween: 20,
             },
           }}
           className="mySwiper"
