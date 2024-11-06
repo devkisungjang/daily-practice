@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect, ReactNode } from "react";
 import classNames from "classnames";
 import modalStyle from "../modal/Modal.module.scss";
 import Button from "../button/Button";
 
 interface ModalTextType {
   title: string;
-  contents: string;
+  children: ReactNode;
 }
 
-const Modal = ({ title, contents }: ModalTextType) => {
+const Modal = ({ title, children }: ModalTextType) => {
   const modalClass = classNames(
     modalStyle.modalContainer,
     modalStyle.modalBackdrop,
@@ -40,11 +40,17 @@ const Modal = ({ title, contents }: ModalTextType) => {
           >
             <div className={modalStyle.desc}>
               <h3>{title}</h3>
-              <p>{contents}</p>
+              {children}
             </div>
-            <Button variant="destructive" onClick={modalCloseHandler}>
-              닫기
-            </Button>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <Button
+                variant="destructive"
+                onClick={modalCloseHandler}
+                style={{ marginTop: "10px" }}
+              >
+                닫기
+              </Button>
+            </div>
           </div>
         </div>
       )}

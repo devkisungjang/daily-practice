@@ -4,6 +4,7 @@ import { setColorsToCSSVariables } from "./styles/themes/colors";
 import { setRadiusToCSSVariables } from "./styles/themes/radius";
 import Badge from "./components/badge/Badge";
 import Modal from "./components/modal/Modal";
+import Responsive from "./pages/Responsive";
 
 function App() {
   useEffect(() => {
@@ -13,8 +14,7 @@ function App() {
 
   return (
     <>
-      {/* <Main /> */}
-      <div>
+      {/* <div>
         <h1>뱃지 테스트</h1>
         <div style={{ display: "flex", gap: "10px" }}>
           <h2>color : </h2>
@@ -39,11 +39,11 @@ function App() {
       </div>
       <div>
         <h1>모달 테스트</h1>
-        <Modal
-          title="여기는 제목이 들어갈 구역입니다"
-          contents="여기는 글내용이 들어갈 구역입니다"
-        />
-      </div>
+        <Modal title="여기는 제목이 들어갈 구역입니다">
+          <div>본문</div>
+        </Modal>
+      </div> */}
+      <Responsive />
     </>
   );
 }

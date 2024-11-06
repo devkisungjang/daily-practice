@@ -1,0 +1,40 @@
+@import "./mixins/constans";
+@import "./mixins/responsive";
+
+header,
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  font-size: 20px;
+  font-weight: 800;
+  border: 2px solid black;
+}
+.contants-container {
+  margin: 0 auto;
+
+  .sec01,
+  .sec02,
+  .sec03 {
+    display: flex;
+    gap: 30px;
+    padding: 30px;
+    outline: 1px solid black;
+    // 반응형 셋팅
+    @include mobile {
+      flex-direction: column;
+    }
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+  .sec02 {
+    @include mobile {
+      flex-direction: column-reverse;
+    }
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
+}

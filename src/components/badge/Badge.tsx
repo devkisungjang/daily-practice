@@ -2,7 +2,7 @@ import classNames from "classnames";
 import badgeStyle from "../badge/Badge.module.scss";
 
 interface BadgeType {
-  backgroundColor?: "blue" | "green" | "orange" | "pink" | undefined;
+  backgroundColor?: "blue" | "green" | "orange" | "pink";
   borderRadius?: "small" | "medium" | "large" | "xlarge";
   children: string;
 }

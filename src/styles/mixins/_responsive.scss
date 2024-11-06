@@ -1,0 +1,18 @@
+// @mixin을 통해 스타일선언 후
+// @include로 사용
+
+@mixin mobile {
+  @media (max-width: $mobile-max) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet-max) and (min-width: $mobile-max) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $desktop-min) {
+    @content;
+  }
+}
