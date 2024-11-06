@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import badgeStyle from "../badge/Badge.module.scss";
 
+// 타입 지정
 interface BadgeType {
   backgroundColor?: "blue" | "green" | "orange" | "pink";
   borderRadius?: "small" | "medium" | "large" | "xlarge";

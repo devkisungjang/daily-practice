@@ -9,10 +9,24 @@ footer {
   height: 70px;
   font-size: 20px;
   font-weight: 800;
-  border: 2px solid black;
+  box-shadow: 5px 5px 20px;
 }
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.5);
+  backdrop-filter: blur(7px); /* 흐릿하게 만드는 효과 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 살짝 그림자 추가 */
+}
+footer {
+  background-color: black;
+  color: white;
+  height: 150px;
+}
+
 .contants-container {
   margin: 0 auto;
+  padding: 0px 20px;
 
   .sec01,
   .sec02,
@@ -20,21 +34,36 @@ footer {
     display: flex;
     gap: 30px;
     padding: 30px;
-    outline: 1px solid black;
+    font-size: 20px;
+
+    .image {
+      object-fit: contain;
+      height: 250px;
+    }
+
     // 반응형 셋팅
     @include mobile {
       flex-direction: column;
+      font-size: 0.7rem;
     }
     @include tablet {
       flex-direction: column;
+      font-size: 0.9rem;
     }
   }
+  .sec01 {
+    padding-top: 100px;
+  }
   .sec02 {
+    flex-direction: row-reverse;
+
     @include mobile {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      font-size: 0.7rem;
     }
     @include tablet {
-      flex-direction: column-reverse;
+      flex-direction: column;
+      font-size: 0.9rem;
     }
   }
 }
