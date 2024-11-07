@@ -5,6 +5,7 @@ import { setRadiusToCSSVariables } from "./styles/themes/radius";
 import Badge from "./components/badge/Badge";
 import Modal from "./components/modal/Modal";
 import Responsive from "./pages/Responsive";
+import MapPage from "./pages/MapPage";
 
 function App() {
   useEffect(() => {
@@ -43,7 +44,8 @@ function App() {
           <div>본문</div>
         </Modal>
       </div> */}
-      <Responsive />
+      {/* <Responsive /> */}
+      <MapPage />
     </>
   );
 }

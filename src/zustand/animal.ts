@@ -12,6 +12,9 @@ export interface dataType {
 
   newGen: string;
   setNewGen: (parent: string) => void;
+
+  dropDownView: boolean;
+  setDropDownView: (parent: boolean) => void;
 }
 
 // store를 create
@@ -35,6 +38,10 @@ const useStore = create((set) => ({
   // 동물 성별
   newGen: "",
   setNewGen: (text: string) => set({ newGen: text }),
+
+  // 드롭다운
+  dropDownView: false,
+  setDropDownView: (dropDownView: boolean) => set({ dropDownView }),
 }));
 
 export default useStore;
