@@ -5,7 +5,7 @@ import { setRadiusToCSSVariables } from "./styles/themes/radius";
 import Badge from "./components/badge/Badge";
 import Modal from "./components/modal/Modal";
 import Responsive from "./pages/Responsive";
-import MapPage from "./pages/MapPage";
+import KakaoMap from "./pages/KakaoMap";
 
 function App() {
   useEffect(() => {
@@ -45,7 +45,7 @@ function App() {
         </Modal>
       </div> */}
       {/* <Responsive /> */}
-      <MapPage />
+      <KakaoMap />
     </>
   );
 }
